@@ -1,3 +1,17 @@
-nav{
+nav {
     border-bottom: 2px solid black;
+}
+
+#refreshCaptcha {
+    background-color: green;
+    color: white;
+
+    padding: 1px 8px;
+    font-size: 20px;
+}
+
+@media (max-width: 568px) {
+    #captcha {
+        justify-content: center;
+    }
 }
