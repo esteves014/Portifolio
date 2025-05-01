@@ -2,6 +2,12 @@ nav {
     border-bottom: 2px solid black;
 }
 
+#logo-nav {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+}
+
 #refreshCaptcha {
     background-color: green;
     color: white;
