@@ -21,16 +21,6 @@
 </head>
 
 <body>
-
-    <!--
-        Argumentação de Acessibilidade (Recomendação e-MAG 1.2.6 - Língua de Sinais (LIBRAS)):
-        A inclusão do plugin VLibras é uma ação direta e significativa de acessibilidade para
-        a comunidade surda que se comunica através da Língua Brasileira de Sinais.
-        Ele oferece uma ferramenta para traduzir o conteúdo textual do site para LIBRAS,
-        ampliando o alcance e a inclusão.
-    -->
-    <!-- VLibras -->
-
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -41,55 +31,19 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-    <!-- NavBar -->
-    <!--
-        Argumentação de Acessibilidade (Recomendações e-MAG 1.3.1 - Informações e Relações; 2.4.1 - Contornar Blocos):
-        O uso de tags semânticas HTML5 como <header>, <nav>, <main>, <section>, e <footer>
-        define a estrutura e o propósito das diferentes regiões da página. Isso é vital para
-        tecnologias assistivas, permitindo que usuários (ex: de leitores de tela) compreendam
-        a organização do conteúdo e naveguem eficientemente entre os blocos principais.
-    -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <!--
-                        Argumentação de Acessibilidade (Recomendação e-MAG 1.1.1 - Conteúdo Não Textual):
-                        O atributo 'alt="Logo do portifólio de Vitor Miguel"' fornece uma descrição textual
-                        alternativa para a imagem do logo. Se a imagem não carregar ou para usuários
-                        de leitores de tela, esta descrição é apresentada, garantindo que a informação
-                        essencial (a identidade visual e o link para a página inicial) não seja perdida.
-                    -->
                     <img src="img/logo/vitor.png" alt="Logo do portifólio de Vitor Miguel" id="logo-nav"
                         class="d-inline-block align-text-top">
                 </a>
-                <!--
-                    Argumentação de Acessibilidade (Recomendação e-MAG 4.1.2 - Nome, Função e Valor):
-                    Este botão (navbar-toggler), visível em telas menores, controla a expansão do menu.
-                    - 'type="button"': Indica que é um botão clicável.
-                    - 'data-bs-toggle="collapse"': Funcionalidade Bootstrap para alternar visibilidade.
-                    - 'data-bs-target="#navbarNavDropdown"': Associa o botão ao elemento que ele controla.
-                    - 'aria-controls="navbarNavDropdown"': Informa explicitamente às tecnologias assistivas
-                      qual elemento é controlado por este botão.
-                    - 'aria-expanded="false"': Indica o estado inicial do menu (recolhido). O Bootstrap
-                      gerencia a atualização deste atributo para 'true' quando o menu é expandido.
-                    - 'aria-label="Toggle navigation"': Fornece uma etiqueta textual clara para leitores
-                      de tela, descrevendo a função do botão, já que ele não possui texto visível.
-                -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <!--
-                        Argumentação de Acessibilidade (Recomendação e-MAG 2.4.4 - Propósito do Link (Em Contexto)):
-                        Os links de navegação utilizam textos descritivos ("Início", "Sobre mim", etc.)
-                        que, em conjunto com o contexto da <nav>, deixam claro o destino de cada link.
-                        O atributo 'aria-current="page"' no link "Início" (quando aplicável na página atual)
-                        indica visualmente e para tecnologias assistivas qual é a página ativa.
-                    -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Início</a>
@@ -110,16 +64,6 @@
     </header>
 
     <main class="py-5">
-
-        <!--
-            Argumentação de Acessibilidade (Recomendação e-MAG 2.4.3 - Ordem do Foco; 2.4.7 - Foco Visível):
-            O atributo 'tabindex="0"' é aplicado às seções principais (<section>).
-            Isso permite que estas seções recebam foco programaticamente (via JavaScript) e
-            sejam incluídas na ordem de navegação por tabulação do teclado, o que pode ser útil
-            para usuários que navegam via teclado, especialmente com scripts de "pular para conteúdo".
-            É importante garantir que o indicador de foco do navegador seja visível.
-        -->
-        <!-- Sobre mim -->
 
         <section id="sobre-mim" class="mb-5" tabindex="0">
             <div class="container">
@@ -156,17 +100,9 @@
 
         <hr class="w-75 m-auto mb-5">
 
-        <!-- Habilidades -->
-
         <section id="habilidades" class="mb-5" tabindex="0">
             <div class="container">
                 <h1>Habilidades</h1>
-                <!--
-                    Argumentação de Acessibilidade (Recomendação e-MAG 1.3.1 - Informações e Relações):
-                    O uso de listas não ordenadas (<ul>) com itens de lista (<li>) para listar
-                    habilidades é semanticamente correto. Isso ajuda leitores de tela a anunciar
-                    o número de itens na lista e a navegar entre eles.
-                -->
                 <ul class="list-group">
                     <li class="list-group-item">Bootstrap</li>
                     <li class="list-group-item">HTML</li>
@@ -185,21 +121,10 @@
         </section>
 
         <hr class="w-75 m-auto mb-5">
-
-
-        <!-- Projetos -->
         <section id="projetos" class="mb-5" tabindex="0">
             <div class="container">
                 <h1>Projetos</h1>
                 <ul class="list-group">
-                    <!--
-                        Argumentação de Acessibilidade (Recomendação e-MAG 1.1.1 - Conteúdo Não Textual):
-                        Cada imagem de projeto possui um atributo 'alt' descritivo.
-                        Ex: 'alt="Logo do site esteves grupo"'. Isso é crucial para que usuários
-                        de leitores de tela entendam o conteúdo visual da imagem.
-                        O 'tabindex="0"' no <li> pode ajudar na navegação por teclado para focar em
-                        blocos de projeto individuais, se desejado.
-                    -->
                     <li class="list-group-item" tabindex="0">
                         <div class="row">
                             <img src="img/img-projetos/estevesgrupo.png" alt="Logo do site esteves grupo"
@@ -216,14 +141,6 @@
                                     administrador
                                     possa fazer o upload, exclusão e também o download desses arquivos no painel
                                     administrativo.</p>
-                                <!--
-                                    Argumentação de Acessibilidade (Recomendação e-MAG 2.4.4 - Propósito do Link):
-                                    O texto do link "Ver projeto" é claro sobre sua ação.
-                                    O atributo 'target="_blank"' abre o link em uma nova aba. Para melhorar
-                                    a acessibilidade, seria ideal adicionar uma indicação visual e/ou textual
-                                    (ex: um ícone de nova aba e um <span class="visually-hidden">(abre em nova aba)</span>)
-                                    para alertar os usuários sobre este comportamento.
-                                -->
                                 <a href="https://www.estevesgrupo.com.br/" target="_blank"
                                     class="btn btn-primary ms-auto">Ver projeto</a>
                             </div>
@@ -255,29 +172,17 @@
         </section>
         <hr class="w-75 m-auto mb-5">
 
-        <!-- Contato -->
-
         <section id="contato" tabindex="0">
             <h1 class="container ">Como entrar em contato</h1>
             <div class="container py-5">
                 <div class="row g-4">
-                    <!-- Formulário -->
                     <div class="col-md-8 m-auto">
                         <div class="bg-light p-4 rounded-3 shadow-sm">
                             <h2>Entre em <span class="text-success">contato</span> e faça uma <span
                                     class="text-success">parceria</span> de sucesso!</h2>
                             <p class="fw-bold">Interessado em meus <span class="text-success">serviços</span>?</p>
-                            <!--
-                                Argumentação de Acessibilidade (Formulário - Recomendações e-MAG 3.3.2 - Rótulos ou Instruções; 1.3.1 - Informações e Relações):
-                                Cada campo de entrada (<input>, <textarea>) está explicitamente associado
-                                à sua etiqueta (<label>) através dos atributos 'for' (na label) e 'id' (no campo).
-                                Isso é vital para que usuários de leitores de tela saibam qual informação
-                                preencher em cada campo. Clicar no rótulo também foca no campo correspondente.
-                                Campos obrigatórios são indicados visualmente com '*' e textualmente no rótulo.
-                            -->
                             <form>
                                 <div class="row g-3">
-                                    <!-- Nome e E-mail -->
                                     <div class="col-md-6">
                                         <label for="nome" class="form-label">Digite seu Nome <span
                                                 class="text-danger">*</span></label>
@@ -290,8 +195,6 @@
                                         <input type="email" id="email_sup" class="form-control btt-email"
                                             placeholder="Digite aqui..." maxlength="100">
                                     </div>
-
-                                    <!-- Telefone e Celular -->
                                     <div class="col-md-6">
                                         <label for="tel" class="form-label">Digite seu Telefone</label>
                                         <input type="tel" id="tel" class="form-control btt-email"
@@ -303,37 +206,18 @@
                                         <input type="tel" id="cell" class="form-control btt-email"
                                             placeholder="Digite aqui..." maxlength="20">
                                     </div>
-
-                                    <!-- Assunto -->
                                     <div class="col-12">
                                         <label for="assunto" class="form-label">Digite seu Assunto <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" id="assunto" class="form-control btt-email"
                                             placeholder="Digite aqui..." maxlength="60">
                                     </div>
-
-                                    <!-- Mensagem -->
                                     <div class="col-12">
                                         <label for="msg" class="form-label">Digite sua Mensagem <span
                                                 class="text-danger">*</span></label>
                                         <textarea id="msg" class="form-control btt-email" rows="4"
                                             placeholder="Digite aqui..." maxlength="255"></textarea>
                                     </div>
-
-                                    <!-- Captcha -->
-
-                                    <!--
-                                        Argumentação de Acessibilidade (Captcha - Recomendação e-MAG 1.1.1 - Conteúdo Não Textual; 2.2.1 - Limite de Tempo Ajustável):
-                                        O Captcha visual apresenta desafios de acessibilidade.
-                                        - 'tabindex="0"' no div do captcha permite que ele seja focado via teclado.
-                                        - O botão de atualizar captcha (<button id="refreshCaptcha">) permite
-                                          obter um novo desafio, o que é bom. O ícone deve ter um 'aria-label'
-                                          se não houver texto visível (Bootstrap icons geralmente precisam disso).
-                                        - É crucial fornecer alternativas para captchas visuais (ex: captcha sonoro,
-                                          ou alternativas que não dependam de percepção visual/auditiva como reCAPTCHA v3).
-                                          O captcha atual, sendo puramente visual e textual, pode ser uma barreira.
-                                          O script captcha.js é responsável pela sua lógica.
-                                    -->
                                     <div class="col-12">
                                         <label class="form-label">Digite os caracteres ao lado <span
                                                 class="text-danger">*</span></label>
@@ -354,9 +238,6 @@
                                         </div>
                                     </div>
 
-
-
-                                    <!-- Política de privacidade -->
                                     <div class="col-12">
                                         <p class="small">Os dados captados nesse formulário não serão utilizados por
                                             terceiros,
@@ -364,15 +245,6 @@
                                             concorda
                                             com nossa política de privacidade.</p>
                                     </div>
-
-                                    <!-- Botões -->
-
-                                    <!--
-                                        Argumentação de Acessibilidade (Botões - Recomendação e-MAG 3.2.2 - Ao Receber Entrada):
-                                        Os botões "Enviar mensagem" e "Cancelar mensagem" têm textos claros
-                                        indicando suas ações. O tipo 'submit' (implícito para o primeiro se dentro de <form>)
-                                        e 'reset' são semanticamente corretos.
-                                    -->
                                     <div class="col-12 d-flex justify-content-center g-3">
                                         <button type="button" id="enviar" class="btn btn-success me-2">Enviar
                                             mensagem</button>
@@ -391,15 +263,6 @@
 
                 <div class="redes-sociais">
                     <ul class="list-group list-group-flush">
-                        <!--
-                            Argumentação de Acessibilidade (Links Externos - Recomendação e-MAG 2.4.4 - Propósito do Link):
-                            Os links para redes sociais usam 'target="_blank"'. É uma boa prática
-                            informar aos usuários (especialmente de leitores de tela) que o link
-                            abrirá em uma nova aba. Isso pode ser feito adicionando um texto oculto
-                            como '<span class="visually-hidden">(abre em nova janela/aba)</span>'
-                            dentro da tag <a>, ou um 'aria-label' que inclua essa informação.
-                            O ícone 'bi-box-arrow-up-right' já dá uma pista visual.
-                        -->
                         <li class="list-group-item" style="font-size: 22px;"><i class="bi bi-github"></i> <a
                                 href="https://github.com/esteves014" target="_blank" class="text-decoration-none">GitHub
                                 <i class="bi bi-box-arrow-up-right"></i></a></li>
@@ -422,11 +285,7 @@
         </div>
     </footer>
 
-    <!-- JS personalizado -->
-
     <script src="js/captcha.js"></script>
-
-    <!-- JS framework -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
